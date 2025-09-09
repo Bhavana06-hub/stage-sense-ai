@@ -35,18 +35,18 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 font-medium ${
+                  className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200 ${
                     isActive
-                      ? "text-background bg-foreground/90 shadow-lg"
-                      : "text-foreground bg-background/80 hover:bg-background hover:shadow-md border border-border/30 hover:border-border/60"
+                      ? "text-white bg-white/20 border border-white/30"
+                      : "text-white/80 hover:text-white hover:bg-white/10 border border-transparent hover:border-white/20"
                   }`}
                 >
                   <Icon className="w-4 h-4" />
-                  <span>{item.name}</span>
+                  <span className="font-medium">{item.name}</span>
                 </Link>
               );
             })}
-            <Button variant="default" size="sm" className="shadow-lg">
+            <Button variant="glass" size="sm">
               Get Started
             </Button>
           </div>
@@ -72,11 +72,11 @@ const Navigation = () => {
                     key={item.name}
                     to={item.path}
                     onClick={() => setIsOpen(false)}
-                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 font-medium ${
-                     isActive
-                       ? "text-background bg-foreground/90 shadow-lg"
-                       : "text-foreground bg-background/80 hover:bg-background hover:shadow-md border border-border/30 hover:border-border/60"
-                   }`}
+                  className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200 ${
+                    isActive
+                      ? "text-white bg-white/20 border border-white/30"
+                      : "text-white/80 hover:text-white hover:bg-white/10 border border-transparent hover:border-white/20"
+                  }`}
                   >
                     <Icon className="w-4 h-4" />
                     <span className="font-medium">{item.name}</span>
@@ -84,7 +84,7 @@ const Navigation = () => {
                 );
               })}
               <div className="pt-2">
-                <Button variant="default" size="sm" className="w-full shadow-lg">
+                <Button variant="glass" size="sm" className="w-full">
                   Get Started
                 </Button>
               </div>
