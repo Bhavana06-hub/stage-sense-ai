@@ -1,4 +1,4 @@
-import { ArrowRight, Mic, Eye, TrendingUp, Star, Users, Award } from "lucide-react";
+import { ArrowRight, Mic, Eye, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -22,11 +22,6 @@ const Home = () => {
     },
   ];
 
-  const stats = [
-    { icon: Users, value: "10K+", label: "Active Users" },
-    { icon: Award, value: "95%", label: "Success Rate" },
-    { icon: Star, value: "4.9", label: "User Rating" },
-  ];
 
   return (
     <div className="min-h-screen">
@@ -67,16 +62,6 @@ const Home = () => {
               </Button>
             </div>
 
-            {/* Stats */}
-            <div className="flex flex-col sm:flex-row gap-8 justify-center mt-16 animate-fade-in-up">
-              {stats.map((stat, index) => (
-                <div key={index} className="flex items-center justify-center space-x-2 text-white/90">
-                  <stat.icon className="w-5 h-5" />
-                  <span className="text-2xl font-bold">{stat.value}</span>
-                  <span className="text-sm">{stat.label}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
 

@@ -10,6 +10,7 @@ const Navigation = () => {
   const navItems = [
     { name: "Home", path: "/", icon: Brain },
     { name: "Practice", path: "/practice", icon: Video },
+    { name: "Exercises", path: "/exercises", icon: BarChart3 },
     { name: "Dashboard", path: "/dashboard", icon: BarChart3 },
   ];
 
@@ -36,8 +37,8 @@ const Navigation = () => {
                   to={item.path}
                   className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200 ${
                     isActive
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                      ? "text-white bg-white/20 border border-white/30"
+                      : "text-white/80 hover:text-white hover:bg-white/10 border border-transparent hover:border-white/20"
                   }`}
                 >
                   <Icon className="w-4 h-4" />
@@ -45,7 +46,7 @@ const Navigation = () => {
                 </Link>
               );
             })}
-            <Button variant="hero" size="sm">
+            <Button variant="glass" size="sm">
               Get Started
             </Button>
           </div>
@@ -71,11 +72,11 @@ const Navigation = () => {
                     key={item.name}
                     to={item.path}
                     onClick={() => setIsOpen(false)}
-                    className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200 ${
-                      isActive
-                        ? "text-primary bg-primary/10"
-                        : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-                    }`}
+                  className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200 ${
+                    isActive
+                      ? "text-white bg-white/20 border border-white/30"
+                      : "text-white/80 hover:text-white hover:bg-white/10 border border-transparent hover:border-white/20"
+                  }`}
                   >
                     <Icon className="w-4 h-4" />
                     <span className="font-medium">{item.name}</span>
@@ -83,7 +84,7 @@ const Navigation = () => {
                 );
               })}
               <div className="pt-2">
-                <Button variant="hero" size="sm" className="w-full">
+                <Button variant="glass" size="sm" className="w-full">
                   Get Started
                 </Button>
               </div>
