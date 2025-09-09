@@ -108,7 +108,7 @@ const Home = () => {
             Ready to Transform Your Speaking?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join thousands of users who have improved their presentation skills with SpeechSense.
+            Start your journey to becoming a confident, engaging speaker with AI-powered feedback.
           </p>
           <Link to="/practice">
             <Button variant="hero" size="lg" className="animate-glow">
